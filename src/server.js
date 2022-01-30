@@ -10,17 +10,20 @@ const onRequest = (request, response) => {
   // switch based on the page that was passed in
   switch (request.url) {
     case '/':
+      // load client.html page
       htmlHandler.getIndex(request, response);
       break;
     case '/party.mp4':
       mediaHandler.getParty(request, response);
       break;
     case '/page2':
-        //load the client2.html page
-        break;
+      // load the client2.html page
+      htmlHandler.getPage2(request, response);
+      break;
     case '/page3':
-        //loads the client 3 page
-        break;
+      // loads the client 3 page
+      htmlHandler.getPage3(request, response);
+      break;
     case '/bling.mp3':
       mediaHandler.getBling(request, response);
       break;
